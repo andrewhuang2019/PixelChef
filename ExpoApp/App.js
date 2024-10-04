@@ -13,13 +13,13 @@ export default function App() {
           <ImageViewer placeholderImageSource={PlaceholderImage}/>
         </View>
         <View style={styles.footerContainer}>
-          <Button theme="primary" label="Choose a photo"></Button>
+          <Button label="Choose a photo"></Button>
           <Button label="Use this photo"></Button>
         </View>
       <StatusBar style="auto" />
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {
