@@ -3,7 +3,7 @@ import FontAwesome from '@expo/vector-icons/FontAwesome';
 
 type Props = {
   label: string;
-  theme?: 'primary';
+  theme?: string;
   onPress?: () => void;
 };
 
@@ -22,6 +22,24 @@ export default function Button({ label, theme, onPress }: Props) {
         </Pressable>
         </View>
       );
+  }
+  if (theme === 'recipe') {
+    return (
+        <View style={styles.buttonContainer}>
+            <Pressable style={styles.button} onPress={() => alert('You pressed the recipe button.')}>
+                <Text style={styles.buttonLabel}>{label}</Text>
+            </Pressable>
+        </View>
+    );
+  }
+  if (theme === 'schedule') {
+    return (
+        <View style={styles.buttonContainer}>
+            <Pressable style={styles.button} onPress={() => alert('You pressed the schedule button.')}>
+                <Text style={styles.buttonLabel}>{label}</Text>
+            </Pressable>
+        </View>
+    );
   }
   return (
     <View style={styles.buttonContainer}>
